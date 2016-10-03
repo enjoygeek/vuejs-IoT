@@ -6,13 +6,34 @@
     <script src="node_modules/systemjs/dist/system.js"></script>
     <script src="node_modules/vue/dist/vue.js"
   </head>
-  <body>
+  <body>  
+        <div id="app">
+            <p>{{ message }}</p>
+        </div>
+
+        <div id="app-2">
+            <span v-bind:id="id" >Inspect me</span>
+        </div>
+
+        <div id="app-3">
+            <p v-if="seen">Now you see me</p>
+        </div>
+
+        <div id="app-4">
+            <ol>
+                <li v-for="todo in todos">
+                {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+
+        <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage" >Reverse Message</button>
+        </div>
       <script>
             System.paths['jquery'] = './node_modules/jquery/dist/jquery.js';
             System.import('src/app.js');
       </script> 
-      <div id="app">
-        <p>{{ message }}</p>
-    </div>
   </body>
 </html>
