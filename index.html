@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drones</title>    
+    <script src="node_modules/traceur/bin/traceur.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="node_modules/vue/dist/vue.js"
+  </head>
+  <body>
+      <script>
+            System.paths['jquery'] = './node_modules/jquery/dist/jquery.js';
+            System.import('src/app.js');
+      </script> 
+      <div id="app">
+        <p>{{ message }}</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+npm install -save es6-module-loader traceur
+npm install -save-dev lite-server
+
+index.html:
+System.import('src/app.js');
+
+create folder 'src' and file 'app.js'
+
+add to package.json scripts
+
+"dev": "lite-server"
+
+npm run dev
